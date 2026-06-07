@@ -1,8 +1,6 @@
 import type { NextConfig } from 'next';
 import { initOpenNextCloudflareForDev } from '@opennextjs/cloudflare';
 
-initOpenNextCloudflareForDev();
-
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
@@ -10,5 +8,9 @@ const nextConfig: NextConfig = {
     ],
   },
 };
+
+if (process.env.NODE_ENV === 'development') {
+  initOpenNextCloudflareForDev();
+}
 
 export default nextConfig;

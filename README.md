@@ -12,7 +12,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![Cloudflare](https://img.shields.io/badge/Deploy-Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white)](https://developers.cloudflare.com/workers/)
 
-[Live Demo](#) · [Report Bug](https://github.com/rakibislam2233/sakina/issues) · [Request Feature](https://github.com/rakibislam2233/sakina/issues)
+[Live Demo](https://sakina.rakib2020-tkg.workers.dev/) · [Report Bug](https://github.com/rakibislam2233/sakina/issues) · [Request Feature](https://github.com/rakibislam2233/sakina/issues)
 
 </div>
 
@@ -23,6 +23,8 @@
 **Sakina** is a mental wellness journal built for people who want a softer, more intentional way to process their thoughts. Write daily chapters, track your moods, and receive thoughtful **Sakina Insights** — poetic reflections, emotional resonance, and curated reading suggestions tailored to how you feel.
 
 The app is fully bilingual (**English** & **Bangla**), theme-aware, and designed to feel calm on both mobile and desktop.
+
+**Live site:** [sakina.rakib2020-tkg.workers.dev](https://sakina.rakib2020-tkg.workers.dev/)
 
 ---
 
