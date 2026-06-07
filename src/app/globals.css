@@ -1,0 +1,283 @@
+@import "tailwindcss";
+@custom-variant dark (&:is([data-theme="night"] *, [data-theme="forest"] *, [data-theme="ocean"] *));
+
+@theme inline {
+  --font-sans: var(--font-sans-active), system-ui, sans-serif;
+  --font-serif: var(--font-serif-active), Georgia, serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-surface-ink: var(--background);
+  --color-surface-abyss: var(--muted);
+  --color-surface-twilight: var(--card);
+  --color-surface-steel: var(--muted);
+  --color-surface-parchment: var(--foreground);
+  --color-twilight-glow: var(--sakina-glow);
+  --color-parchment-dim: var(--muted-foreground);
+  --color-charcoal-dark: var(--card);
+  --color-charcoal-light: var(--muted);
+  --color-outline-neutral: var(--border);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* Shared defaults — overridden per theme */
+:root {
+  --radius: 0.625rem;
+  --font-sans-active: var(--font-sans-en);
+  --font-serif-active: var(--font-serif-en);
+}
+
+html.lang-bn {
+  --font-sans-active: var(--font-sans-bn);
+  --font-serif-active: var(--font-sans-bn);
+}
+
+/* ─── 1. Sakina Parchment (light calm) ─── */
+[data-theme='parchment'] {
+  color-scheme: light;
+  --background: #faf9f6;
+  --foreground: #1a1a1c;
+  --card: #f2efe9;
+  --card-foreground: #1a1a1c;
+  --popover: #faf9f6;
+  --popover-foreground: #1a1a1c;
+  --primary: #4e46e5;
+  --primary-foreground: #faf9f6;
+  --secondary: #ebe7df;
+  --secondary-foreground: #1a1a1c;
+  --muted: #ebe7df;
+  --muted-foreground: #5c5a5d;
+  --accent: #eef2ff;
+  --accent-foreground: #3730a3;
+  --destructive: #dc2626;
+  --border: rgba(26, 26, 28, 0.1);
+  --input: rgba(26, 26, 28, 0.12);
+  --ring: #4e46e5;
+  --sakina-glow: #4e46e5;
+}
+
+/* ─── 2. Sakina Night (evening reflection) ─── */
+[data-theme='night'] {
+  color-scheme: dark;
+  --background: #131315;
+  --foreground: #e5e1e4;
+  --card: #1b1b1d;
+  --card-foreground: #e5e1e4;
+  --popover: #1b1b1d;
+  --popover-foreground: #e5e1e4;
+  --primary: #c2c1ff;
+  --primary-foreground: #131315;
+  --secondary: #0e0e10;
+  --secondary-foreground: #e5e1e4;
+  --muted: #0e0e10;
+  --muted-foreground: #919189;
+  --accent: #2e2e45;
+  --accent-foreground: #c2c1ff;
+  --destructive: #f87171;
+  --border: rgba(255, 255, 241, 0.08);
+  --input: rgba(255, 255, 241, 0.1);
+  --ring: #c2c1ff;
+  --sakina-glow: #c2c1ff;
+}
+
+/* ─── 3. Sakina Dawn (morning hope) ─── */
+[data-theme='dawn'] {
+  color-scheme: light;
+  --background: #fff8f3;
+  --foreground: #3d2c29;
+  --card: #ffefe4;
+  --card-foreground: #3d2c29;
+  --popover: #fff8f3;
+  --popover-foreground: #3d2c29;
+  --primary: #e07a5f;
+  --primary-foreground: #fff8f3;
+  --secondary: #fde8d7;
+  --secondary-foreground: #5c4037;
+  --muted: #fde8d7;
+  --muted-foreground: #8b6f63;
+  --accent: #fff0e6;
+  --accent-foreground: #c05621;
+  --destructive: #dc2626;
+  --border: rgba(61, 44, 41, 0.1);
+  --input: rgba(61, 44, 41, 0.12);
+  --ring: #e07a5f;
+  --sakina-glow: #e07a5f;
+}
+
+/* ─── 4. Sakina Forest (grounding nature) ─── */
+[data-theme='forest'] {
+  color-scheme: dark;
+  --background: #0f1612;
+  --foreground: #e2ece4;
+  --card: #162019;
+  --card-foreground: #e2ece4;
+  --popover: #162019;
+  --popover-foreground: #e2ece4;
+  --primary: #86efac;
+  --primary-foreground: #0f1612;
+  --secondary: #0a100d;
+  --secondary-foreground: #e2ece4;
+  --muted: #0a100d;
+  --muted-foreground: #8fa899;
+  --accent: #1a2e22;
+  --accent-foreground: #86efac;
+  --destructive: #f87171;
+  --border: rgba(134, 239, 172, 0.1);
+  --input: rgba(134, 239, 172, 0.12);
+  --ring: #86efac;
+  --sakina-glow: #86efac;
+}
+
+/* ─── 5. Sakina Ocean (flow & clarity) ─── */
+[data-theme='ocean'] {
+  color-scheme: dark;
+  --background: #0a1218;
+  --foreground: #dce8f0;
+  --card: #111c26;
+  --card-foreground: #dce8f0;
+  --popover: #111c26;
+  --popover-foreground: #dce8f0;
+  --primary: #67e8f9;
+  --primary-foreground: #0a1218;
+  --secondary: #071018;
+  --secondary-foreground: #dce8f0;
+  --muted: #071018;
+  --muted-foreground: #7a9aad;
+  --accent: #0f2838;
+  --accent-foreground: #67e8f9;
+  --destructive: #f87171;
+  --border: rgba(103, 232, 249, 0.1);
+  --input: rgba(103, 232, 249, 0.12);
+  --ring: #67e8f9;
+  --sakina-glow: #67e8f9;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply scroll-smooth;
+    font-size: 16.5px;
+  }
+
+  @media (min-width: 640px) {
+    html {
+      font-size: 17.5px;
+    }
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    transition: background-color 0.35s ease, color 0.35s ease;
+  }
+}
+
+.glass-panel {
+  background: var(--card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+}
+
+.glass-panel-elevated {
+  background: color-mix(in srgb, var(--muted) 85%, var(--card));
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--border);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--card);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.font-serif {
+  font-family: var(--font-serif-active), Georgia, serif;
+}
+
+.font-bn {
+  font-family: var(--font-sans-bn), var(--font-sans-en), sans-serif;
+}
+
+.font-bn-serif {
+  font-family: var(--font-sans-bn), var(--font-serif-en), serif;
+}
+
+/* Theme-aware Sakina insight panels */
+.insight-panel {
+  background: color-mix(in srgb, var(--card) 88%, var(--muted));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.insight-panel-embrace {
+  background: color-mix(in srgb, var(--primary) 7%, var(--card));
+  border-color: color-mix(in srgb, var(--primary) 22%, var(--border));
+}
+
+.insight-panel-spiritual {
+  background: color-mix(in srgb, #10b981 6%, var(--card));
+  border-color: color-mix(in srgb, #10b981 18%, var(--border));
+}
+
+.insight-panel-wisdom {
+  background: color-mix(in srgb, #f59e0b 6%, var(--card));
+  border-color: color-mix(in srgb, #f59e0b 18%, var(--border));
+}
+
+.insight-panel-shelf {
+  background: color-mix(in srgb, #0ea5e9 6%, var(--card));
+  border-color: color-mix(in srgb, #0ea5e9 18%, var(--border));
+}

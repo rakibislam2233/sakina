@@ -1,0 +1,6 @@
+{
+  "name": "Sakina",
+  "description": "An elegant, visual mental wellness journal representing deep peace and tranquility, featuring calming light/dark modes, specialized emotional mood maps, AI-driven spiritual reflections, and insightful cognitive summaries.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
