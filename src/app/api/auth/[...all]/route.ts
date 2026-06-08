@@ -1,0 +1,13 @@
+import { getAuth } from "@/lib/auth/index";
+import { getCloudflareContext } from "@opennextjs/cloudflare";
+export async function GET(request: Request) {
+  const { env } = await getCloudflareContext({ async: true });
+  const auth = getAuth(env);
+  return auth.handler(request);
+}
+
+export async function POST(request: Request) {
+  const { env } = await getCloudflareContext({ async: true });
+  const auth = getAuth(env);
+  return auth.handler(request);
+}

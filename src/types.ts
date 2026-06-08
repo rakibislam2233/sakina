@@ -1,13 +1,8 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
 export type Mood = 'Peaceful' | 'Thoughtful' | 'Sad' | 'Stressed' | 'Creative';
 
 export interface MoodConfig {
   name: Mood;
-  label: string; // Simplified, friendly English mapping
+  label: string;
   description: string;
   emoji: string;
   colorLight: string;
