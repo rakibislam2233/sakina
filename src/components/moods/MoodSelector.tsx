@@ -35,7 +35,7 @@ export const MoodSelector: React.FC<MoodSelectorProps> = ({ selectedMood, onChan
               key={m.name}
               type="button"
               onClick={() => onChange(m.name)}
-              className={`flex flex-col items-start p-3.5 rounded-md transition-all duration-300 text-left cursor-pointer border min-w-0 ${
+              className={`flex flex-col items-start px-2.5 py-3 rounded-md transition-all duration-300 text-left cursor-pointer border min-w-0 ${
                 isSelected
                   ? 'bg-muted border-primary/40 shadow-sm ring-1 ring-primary/20'
                   : 'bg-card border-border hover:border-primary/25 hover:bg-muted/50'

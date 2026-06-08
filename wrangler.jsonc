@@ -19,5 +19,35 @@
   ],
   "observability": {
     "enabled": true,
-  }
+  },
+  //configure Hyperdrive for database connections
+  "hyperdrive": [
+    {
+      "binding": "HYPERDRIVE",
+      "id": "6a582a7c3b6e49acad83bbafe6fcb57a",
+      "localConnectionString": "postgresql://neondb_owner:npg_5iTDJ3jIVyZl@ep-royal-cake-aqc3qkpt-pooler.c-8.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require", //Optional: Only needed if you want to connect to the database from your local machine using Wrangler CLI
+    },
+  ],
+  // Configure Queues for background tasks
+  "queues": {
+    "producers": [
+      {
+        "queue": "sakina-queue",
+        "binding": "QUEUE",
+      },
+    ],
+    "consumers": [
+      {
+        "queue": "sakina-queue",
+        "max_batch_size": 10,
+        "max_batch_timeout": 5,
+      },
+    ],
+  },
+  //   Configure AI bindings for AI calls
+  "ai": {
+    "binding": "AI",
+	"remote": true
+  },
+
 }

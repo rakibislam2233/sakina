@@ -2,7 +2,7 @@ export type Mood = 'Peaceful' | 'Thoughtful' | 'Sad' | 'Stressed' | 'Creative';
 
 export interface MoodConfig {
   name: Mood;
-  label: string;
+  label: string; 
   description: string;
   emoji: string;
   colorLight: string;

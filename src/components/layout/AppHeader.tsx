@@ -138,7 +138,7 @@ export function AppHeader({ entriesCount, user, onSignOut }: AppHeaderProps) {
 
           <div className="hidden lg:flex flex-col text-right pl-1">
             <span className="font-mono text-xs text-primary tracking-wide">{time || '--:--'}</span>
-            <span className="font-sans text-xs text-muted-foreground tracking-wider uppercase">
+            <span className="font-sans text-xs text-muted-foreground tracking-wider">
               {t('nav.clock')}
             </span>
           </div>
